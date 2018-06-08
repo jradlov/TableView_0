@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TableView_0"
+             x:Class="TableView_0.MainPage">
+
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Basics">
+                <TextCell Text="Name" Detail="Jaime Radulovich" />
+                <EntryCell x:Name="entry1"  Label="Title" Placeholder="blah blah blah..." Completed="EntryCell_Completed" />
+                <SwitchCell Text="Notifications" On="True" OnChanged="SwitchCell_OnChanged" />
+
+                <!-- Custom Cell -->
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10,0">
+                        <Label Text="Starts" VerticalOptions="Center" />
+                        <DatePicker Date="1 Jul 2018" HorizontalOptions="EndAndExpand" DateSelected="DatePicker_DateSelected"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
